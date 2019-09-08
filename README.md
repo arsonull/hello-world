@@ -1,0 +1,1 @@
+My name is Carson Perry. I've been teaching myself programming since I was in 8th grade, and I have plans to create my own indie game studio, where I will employ somewhere between 5-14 people in a way similar to Corridor Digital on youtube.
