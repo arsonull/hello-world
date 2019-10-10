@@ -1,3 +1,6 @@
+/*Author: Carson Perry
+Date: 10/10/2019
+Solved using alarm()*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
