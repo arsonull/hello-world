@@ -17,15 +17,15 @@ public class LoginHandler
     $service = new SecurityService($username, $password);
     $ok = $service->login();
     
-    if($ok)
+    if($ok == true)
     {
-        $_SESSION["Admin"] = true;
-        echo("You are authenticated");
+        $_SESSION["principle"] = true;
+        include_once "LoginPass.php";
     }
     else
     {
-        $_SESSION["Admin"] = false;
-        echo("Your information is wrong");
+        $_SESSION["principle"] = false;
+        include_once "LoginFailed.php";
     }
 }
 ?>
