@@ -2,6 +2,6 @@
 <head>
 </head>
 <body>
-    <?php echo Login failed!;?>
+    <?php echo "Login failed!";?>
 </body>
 </html>
