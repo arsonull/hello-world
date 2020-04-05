@@ -9,10 +9,10 @@ import javax.validation.constraints.Size;
 @ViewScoped
 public class User 
 {
-	@NotNull(message = "You done and fupped up by not entering a first name!")
+	@NotNull(message = "This ain't the military, enter your first name!")
 	@Size(min=2,max=20)
     String firstName = "";
-	@NotNull(message = "You didn't enter the last name you screwball!")
+	@NotNull(message = "You fool of a Took! You didn't enter your last name!")
 	@Size(min=2,max=20)
     String lastName = "";
     

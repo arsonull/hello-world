@@ -5,7 +5,7 @@ class Database{
         //echo "Database->getconnected invoked";
         $this->dbhost = 'localhost';
         $this->dbuser = 'root';
-        $this->dbpass = 'root';
+        $this->dbpass = '';
         $this->dbname = 'act5';
         $this->port = '';
         

@@ -12,7 +12,7 @@ class SavingsAccountDataService
         $connection = $database->getConnected();
         $sql = "SELECT BALANCE FROM saving WHERE SAVE_ID = 1";
 
-        $bal = connection->query($sql);
+        $bal = $connection->query($sql);
         return $bal;
     }
 
