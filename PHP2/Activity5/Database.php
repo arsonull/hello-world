@@ -7,7 +7,7 @@ class Database{
         $this->dbuser = 'root';
         $this->dbpass = '';
         $this->dbname = 'act5';
-        $this->port = '';
+        $this->port = '3308';
         
         //connect to the db
         $this->dbconnect = new mysqli($this->dbhost , $this->dbuser , $this->dbpass,$this->dbname);

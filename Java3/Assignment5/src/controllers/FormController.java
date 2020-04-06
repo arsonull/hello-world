@@ -1,6 +1,7 @@
 package controllers;
 
 import beans.Order;
+import beans.Orders;
 import beans.User;
 
 import java.sql.Connection;
@@ -24,7 +25,12 @@ public class FormController {
 		//Forward to Test Response View along with the User Managed Bean
 		FacesContext.getCurrentInstance().getExternalContext().getRequestMap().put("user", user);
 		
-		getAllOrders();
+		List<Order> orderList = getAllOrders();
+		Orders orders = new Orders();
+		orders.setOrders(orderList);
+		
+		
+		FacesContext.getCurrentInstance().getExternalContext().getRequestMap().put("orders", orders);
 		
 		return "TestResponse.xhtml";
 	}
@@ -33,9 +39,9 @@ public class FormController {
 	{
 		Connection conn = null;
 		String url = "jdbc:postgresql://localhost:5432/postgres";
-		String user = "root";
-		String pass = "pass";
-		String sql = "SELECT * FROM testapp.Orders";
+		String user = "postgres";
+		String pass = "root";
+		String sql = "SELECT * FROM testapp.orders";
 		List<Order> orders = new ArrayList<Order>();
 		try
 		{
