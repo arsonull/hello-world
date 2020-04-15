@@ -1,36 +1,51 @@
 <?php
 require_once ("Database.php");
 
-class CheckingAccountDataService
+class CheckingAccountDataService extends Database
 {
     function __construct()
     {
 
     }
-    function getBalance()
+    function getBalance($conn)
     {
-        $database = new Database();
-        $connection = $database->getConnected();
-        $sql = "SELECT BALANCE FROM checking WHERE CHECK_ID = 1";
+        //$database = new Database();
+        //$connection = $database->getConnected();
+        $sql = "SELECT BALANCE FROM CHECKING";
 
-        $bal = $connection->query($sql);
-        return $bal;
+        //$bal = $connection->query($sql);
+        //$bal = $this->getConnected()->query($sql);
+        $bal = $conn->query($sql);
+        //echo $bal;
+        $numRows = $bal->num_rows;
+        //echo $numRows;
+        $row = $bal->fetch_assoc();
+        $acBal = $row["BALANCE"];
+
+        //$this->disconnect();
+        //$conn->close;
+        /*if ($bal = $connection->query($sql))
+        {
+
+        }*/
+        return $acBal;
     }
 
-    function updateBalance($bal)
+    function updateBalance($conn, $bal)
     {
-        $database = new Database();
-        $connection = $database->getConnected();
-        $sql = "INSERT INTO BALANCE (CHECK_ID, BALANCE) VALUES (NULL, '$bal')";
+        $sql = "UPDATE CHECKING SET BALANCE = '$bal' WHERE CHECK_ID = 1 ";
 
-        if ($connection->query($sql))
+        if ($conn->query($sql))
         {
+            $conn->query($sql);
             return 1;
         }
         else
         {
             return 0;
         }
+        //return $conn->query($sql);
+        
     }
 }
 

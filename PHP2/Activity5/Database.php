@@ -5,12 +5,14 @@ class Database{
         //echo "Database->getconnected invoked";
         $this->dbhost = 'localhost';
         $this->dbuser = 'root';
-        $this->dbpass = '';
+        $this->dbpass = 'root';
         $this->dbname = 'act5';
-        $this->port = '3308';
+        $this->port = '3306';
         
         //connect to the db
-        $this->dbconnect = new mysqli($this->dbhost , $this->dbuser , $this->dbpass,$this->dbname);
+        //echo "hello from getConnected";
+        $this->dbconnect = new mysqli($this->dbhost , $this->dbuser , $this->dbpass,$this->dbname, $this->port);
+        
         if($this->dbconnect->connect_error){
             die('Failed to connect to MySQL: ' . $this->dbconnect->connect_error);
         }
@@ -18,8 +20,9 @@ class Database{
         //echo "connected";
         return $this->dbconnect;
     }
-    function disconnect($connect){
-        $connect->close;
+    function disconnect(){
+        //echo "disconnecting";
+        $this->close;
     }
 }
 ?>

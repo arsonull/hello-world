@@ -1,36 +1,15 @@
 <?php
+//echo "hello!";
 require_once ("CheckingAccountDataService.php");
+//echo "1";
 require_once ("SavingsAccountDataService.php");
+//echo "2";
+require_once ("BankBusinessService.php");
+//echo "3";
 
-$checkServ = new CheckingAccountDataService();
-$balA = $checkServ->getBalance();
-echo "<h1>" . $balA . "</h1> <br/>";
-$balU = $balA + 100;
-
-if ($checkServ->updateBalance($balU))
-{
-    echo "<h1>Succesful update</h1> <br/>";
-}
-else
-{
-    echo "<h1>Update Failed!</h1> <br/>";
-}
-
-$balB = $checkServ->getBalance();
-echo "<h1>" . $balB . "</h1> <br/>";
-
-$saveServ = new SavingsAccountDataService();
-$salA = $saleServ->getBalance();
-echo "<h1>" . $salA . "</h1> <br/>";
-$salU = $salA + 100;
-
-if ($saleServ->updateBalance($salU))
-{
-    echo "<h1>Succesful update</h1> <br/>";
-}
-else
-{
-    echo "<h1>Update Failed!</h1> <br/>";
-}
-$salB = $saleServ->getBalance();
-echo "<h1>" . $salB . "</h1>";
+$service = new BankBusinessService();
+echo "<h1>" . $service->getCheckBalance() . "</h1><br/>";
+echo "<h1>" . $service->getSaveBalance() . "</h1><br/>";
+$service->transaction();
+echo "<h1>" . $service->getCheckBalance() . "</h1><br/>";
+echo "<h1>" . $service->getSaveBalance() . "</h1><br/>";
