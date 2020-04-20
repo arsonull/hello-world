@@ -1,0 +1,109 @@
+<html><head>
+<title>Schema Report for database: NotAScam</title>
+<style>
+        td,th {
+        text-align:left;
+        vertical-align:middle;
+        }
+        table {
+        border-collapse: collapse;
+        border: 1px solid;
+        }
+        caption, th, td {
+        padding: .2em .8em;
+        border: 1px solid #000000;
+        }
+        caption {
+        background: #D3D3D3;
+        font-weight: bold;
+        font-size: 1.1em;
+        }
+        th {
+        font-weight: bold;
+        background: #000000;
+        color: white;
+        }
+        td {
+        background: #FFFFFF;
+        }
+        </style>
+      </head>
+     <body>
+<h1>Schema Report for database: NotAScam</h1>
+<a id="home">Table List </a><br /><ul>
+<li><a href="#orders">orders </a></li>
+<li><a href="#products">products </a></li>
+<li><a href="#roles">roles </a></li>
+<li><a href="#users">users </a></li>
+</ul>
+<a id="orders"></a><table style="width:100%"><caption>Table: orders </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>order_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>users_user_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="products"></a><table style="width:100%"><caption>Table: products </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>product_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>name</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>price</td><td>DOUBLE(8,2)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>short_desc</td><td>VARCHAR(150)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>image</td><td>VARCHAR(100)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>category_ID</td><td>INT(11)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>description</td><td>VARCHAR(300)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>desc_image</td><td>VARCHAR(30)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>orders_order_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+<tr><td>orders_users_user_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>Yes</td><td></td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="roles"></a><table style="width:100%"><caption>Table: roles </caption>
+<tr><td>Table Comments</td><td colspan="6"></td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>type</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+<a id="users"></a><table style="width:100%"><caption>Table: users </caption>
+<tr><td>Table Comments</td><td colspan="6">This is the users table, and is subject to change.  </td></tr>
+<tr><td colspan="7">Columns</td></tr>
+        <tr>
+        <th>Name</th>
+        <th>Data Type</th>
+        <th>Nullable</th>
+        <th>PK</th>
+        <th>FK</th>
+        <th>Default</th>
+        <th>Comment</th>
+        </tr>
+<tr><td>user_ID</td><td>INT(11)</td><td>Yes</td><td>Yes</td><td>No</td><td></td><td></td></tr>
+<tr><td>email</td><td>VARCHAR(75)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>username</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+<tr><td>password</td><td>VARCHAR(45)</td><td>No</td><td>No</td><td>No</td><td>NULL</td><td></td></tr>
+</table><a href="#home">Table List </a></br>
+</body></html>
