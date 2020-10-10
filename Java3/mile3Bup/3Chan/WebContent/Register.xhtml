@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<h:outputStylesheet library="css" name="styles.css" />
+	<h:outputStylesheet library="css" name="table-style.css"/>
+</h:head> 
+<h:body> 
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="title">Registration Page</ui:define><br/>
+		<ui:define name="content">
+		Please enter your desired username and password!
+			<h:form>
+				<h:inputText value="#{user.username}" /><br><h:messages for="username"></h:messages></br>
+				<h:inputText value="#{user.password}" /><br/>
+				<h:commandButton value="Submit" action="#{registerController.onSubmit(user)}"/><br/>
+			</h:form>
+			<h:messages/>
+		</ui:define>
+	</ui:composition>
+</h:body> 
+</html>

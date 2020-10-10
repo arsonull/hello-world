@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+
+<h:body> 
+	<ui:composition template="/layouts/commonLayout.xhtml">
+		<ui:define name="title">JSF Login Page</ui:define>
+		<ui:define name="content">
+			<div align="center">
+				<br/>
+				<h:dataTable value="#{Posts.posts}" var="p" styleClass="order-table" headerClass="order-table-header" rowClasses="order-table-odd-row, order-table-even-row">
+					<h:column>
+						<f:facet name="header">Title</f:facet>
+						#{p.title}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Content</f:facet>
+						#{p.content}
+					</h:column>
+					<h:column>
+						<f:facet name="header">Username</f:facet>
+						#{user.username}
+					</h:column>
+				</h:dataTable>
+			</div>
+		</ui:define>
+	</ui:composition>
+	<!-- Set the layout and title for the page -->
+</h:body> 
+</html>
