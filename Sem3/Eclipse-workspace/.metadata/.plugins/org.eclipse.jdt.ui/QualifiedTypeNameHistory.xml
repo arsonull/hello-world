@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
+<fullyQualifiedTypeName name="javax.validation.constraints.Max"/>
+<fullyQualifiedTypeName name="util.TracksNotFoundException"/>
+<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
+</qualifiedTypeNameHistroy>

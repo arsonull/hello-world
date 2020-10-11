@@ -1,0 +1,31 @@
+package business;
+
+import beans.Album;
+import javax.ejb.Local;
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
+/**
+ * Session Bean implementation class MusicManager
+ */
+@Stateless
+@Local(MusicManagerInterface.class)
+@LocalBean
+public class MusicManager implements MusicManagerInterface {
+
+    /**
+     * Default constructor. 
+     */
+    public MusicManager() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+     * @see MusicManagerInterface#addAlbum(Album)
+     */
+    public Album addAlbum(Album album) {
+        // TODO Auto-generated method stub
+			return null;
+    }
+
+}
