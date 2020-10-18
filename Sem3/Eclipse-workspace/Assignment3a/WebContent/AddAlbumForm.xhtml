@@ -5,12 +5,13 @@
       xmlns:h="http://java.sun.com/jsf/html"> 
 
 <h:head>
-	<title>Add Music Album</title>
+	<title>Add Album</title>
 </h:head> 
 
 <body>
 	<div align="center">
-		<h1>Add Music Album</h1>
+		<h1>Add Album</h1>
+		<h:messages></h:messages>
 		<h:form>
 			Title: <h:inputText value="#{album.title}" title="" /><h:message for="title">Must be between 5 and 50 letters</h:message><br/>
 			Artist: <h:inputText value="#{album.artist}" title="" /><h:message for="artist">Must be between 5 and 25 letters</h:message><br/>

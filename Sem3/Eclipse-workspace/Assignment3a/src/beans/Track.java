@@ -1,5 +1,7 @@
 package beans;
 
+import javax.faces.bean.ManagedBean;
+
 public class Track
 {
 	String title;

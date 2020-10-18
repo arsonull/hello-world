@@ -48,6 +48,7 @@ public class MusicManager implements MusicManagerInterface
         //Step 2
         if(album.getNumberTracks() == 0)
         {
+        	System.out.println("No tracks found");
         	throw new TracksNotFoundException();
         }
         //Step 3 to do

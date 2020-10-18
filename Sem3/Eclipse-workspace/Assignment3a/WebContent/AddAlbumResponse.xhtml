@@ -16,10 +16,10 @@
 		<br/>
 		
 		<br/>
-		The album has #{album.tracks.size()} tracks.
+		<!-- The album has #{album.tracks.size()} tracks. -->
 		<br/>
-		<h:datatable value="#{album.tracks}" var="t" styleClass="tracks-table" headerClass="tracks-table-header"
-						rowClasses="tracks-table-odd-row,racks-table-even-row">
+		<h:dataTable value="#{album.tracks}" var="t" styleClass="tracks-table" headerClass="tracks-table-header"
+					rowClasses="tracks-table-odd-row,racks-table-even-row">
 			<h:column>
 				<f:facet name="header">Track Number</f:facet>
 				#{t.number}
@@ -27,8 +27,9 @@
 			<h:column>
 				<f:facet name="header">Song Title</f:facet>
 				<div align="left">#{t.title}</div>
-			</h:column>		
-		</h:datatable>
+			</h:column>
+		</h:dataTable>
+		<br/>
 		<h:form>
 			<h:button value="Add Another" outcome="AddAlbumForm.xhtml" />
 		</h:form>

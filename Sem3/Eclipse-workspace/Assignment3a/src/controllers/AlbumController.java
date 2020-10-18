@@ -13,9 +13,12 @@ public class AlbumController
 {
 	public String onSubmit(Album album)
 	{
+		System.out.println("in controller with " + album.getArtist());
 		MusicManager mgr = new MusicManager();
+		System.out.println("mgr made");
 		try
 		{
+			System.out.println("try");
 			album = mgr.addAlbum(album);
 		}
 		catch (TracksNotFoundException e)
@@ -24,6 +27,7 @@ public class AlbumController
 		}
 		
 		FacesContext.getCurrentInstance().getExternalContext().getRequestMap().put("album", album);
+		System.out.println("returning...");
 		return "AddAlbumResponse.xhtml";
 	}
 }
