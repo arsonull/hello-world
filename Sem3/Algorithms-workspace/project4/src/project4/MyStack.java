@@ -13,6 +13,7 @@ public class MyStack
 		Node no = new Node(n);
 		head = no;
 		tail = no;
+		size = 1;
 	}
 	
 	public void push(MazeCell n)
