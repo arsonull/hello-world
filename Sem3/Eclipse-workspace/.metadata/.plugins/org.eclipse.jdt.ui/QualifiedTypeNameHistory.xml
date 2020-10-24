@@ -22,4 +22,6 @@
 <fullyQualifiedTypeName name="util.TracksNotFoundException"/>
 <fullyQualifiedTypeName name="data.MusicDataService"/>
 <fullyQualifiedTypeName name="util.AlbumNotFoundException"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="business.MusicManagerInterface"/>
 </qualifiedTypeNameHistroy>
