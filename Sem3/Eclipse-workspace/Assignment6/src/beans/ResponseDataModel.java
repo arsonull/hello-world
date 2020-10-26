@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlAccessType;
 
 //This is a DTO
-@XmlRootElement(name="Respnse")
+@XmlRootElement(name="Response")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ResponseDataModel extends ResponseModel
 {

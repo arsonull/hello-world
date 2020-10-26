@@ -21,7 +21,9 @@ public class AlbumController
 	{
 		try
 		{
+			System.out.println("Getting album");
 			album = service.addAlbum(album);
+			System.out.println("Got album: " + album.getTitle());
 		}
 		catch (TracksNotFoundException e)
 		{

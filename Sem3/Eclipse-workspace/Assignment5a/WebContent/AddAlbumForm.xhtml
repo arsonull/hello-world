@@ -12,9 +12,9 @@
 	<div align="center">
 		<h1>Add Music Album</h1>
 		<h:form>
-			Title: <h:inputText value="#{album.title}" title="" /><h:message for="title">Must be between 5 and 50 letters</h:message><br/>
-			Artist: <h:inputText value="#{album.artist}" title="" /><h:message for="artist">Must be between 5 and 25 letters</h:message><br/>
-			Year: <h:inputText minlength="4" value="#{album.year}" title="" /><h:message for="year">Must be between 1920 and 2020</h:message><br/>
+			Title: <h:inputText value="#{album.title}" title="" id="title" /><h:message for="title">Must be between 5 and 50 letters</h:message><br/>
+			Artist: <h:inputText value="#{album.artist}" title="" id="artist" /><h:message for="artist">Must be between 5 and 25 letters</h:message><br/>
+			Year: <h:inputText minlength="4" value="#{album.year}" title="" id="year" /><h:message for="year">Must be between 1920 and 2020</h:message><br/>
 			<h:commandButton value="Add Album" action="#{albumController.onSubmit(album)}" />
 			<h:commandButton value="Find Album" action="#{albumController.findAlbum(album)}" />
 		</h:form>
