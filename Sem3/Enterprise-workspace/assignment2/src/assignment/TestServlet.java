@@ -19,6 +19,8 @@ public class TestServlet extends HttpServlet
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
 	{
+		String firstname = request.getParameter("firstname");
+		String lastname = request.getParameter("lastname");
 		System.out.println("doGet");
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
@@ -28,13 +30,11 @@ public class TestServlet extends HttpServlet
 		doGet(request, response);
 	}
 	
-	@Override
 	public void init()
 	{
 		System.out.println("init real");
 	}
 	
-	@Override
 	public void destroy()
 	{
 		System.out.println("destroy");
