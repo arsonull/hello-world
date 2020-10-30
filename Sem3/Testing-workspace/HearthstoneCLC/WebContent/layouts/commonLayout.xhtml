@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+	<title>
+		<ui:insert name = "title">HearthstoneAPI</ui:insert>
+	</title>
+	<style type="text/css">
+    body { background-color: #D4D3D3 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    </style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <h:outputStylesheet library="css" name="footer.css"/> -->
+</h:head> 
+
+<!-- inlcude layout pages that will store how the header, content, and footer will look -->
+<h:body> 
+	<div id = "page">
+		<!-- Header Facelet here -->
+			<div id = "header">
+				<ui:insert name = "header">
+					<ui:include src = "/layouts/commonHeader.xhtml"></ui:include>
+				</ui:insert>
+			</div>
+			
+			<!-- Content Facelet here -->
+			<div id = "content">
+				<f:view>
+					<ui:insert name = "content">
+						<ui:include src = "/layouts/commonContent.xhtml"></ui:include>
+					</ui:insert>
+				</f:view>
+			</div>
+			
+			<!-- Footer Facelet here -->
+			<div id = "footer" align = "center">
+				<ui:insert name = "footer">
+					<ui:include src = "/layouts/commonFooter.xhtml"></ui:include>
+				</ui:insert>
+			</div>
+	</div>
+</h:body> 
+</html>
