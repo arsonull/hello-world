@@ -135,7 +135,7 @@ public class CardDAO implements CardDAOInterface<Card>{
 			while(rs.next())
 			{
 				Card card = new Card(rs.getString("CARDNAME"), rs.getInt("HEALTH"), rs.getInt("MANACOST"));
-				cards.addCard(card);
+				cards.add(card);
 			}
 			return cards;
 		}

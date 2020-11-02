@@ -27,13 +27,16 @@ public class CardService implements CardBusinessInterface{
         String url = "jdbc:mysql://localhost:3306/HearthstoneAPI";
         String username = "root";
         String password = "root";
+        System.out.println("after connection");
 
         //try the connection
         try {
             //Connect to database
             conn = DriverManager.getConnection(url, username, password);
+            System.out.println("after creation");
             //add all cards to database
             boolean addCards = service.create(cards, conn);
+            System.out.println("before return");
 
             return addCards;
         }catch(Exception e) {

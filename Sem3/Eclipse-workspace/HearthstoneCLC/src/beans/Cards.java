@@ -16,12 +16,19 @@ public class Cards
 		this.cards = cards;
 	}
 	
-	public void addCard(Card c)
+	public void add(Card c)
 	{
 		cards.add(c);
 	}
 	public List<Card> getCards()
 	{
 		return cards;
+	}
+	public void print()
+	{
+		for (int i = 0; i < cards.size(); i++)
+		{
+			System.out.println(cards.get(i).getName() + ", " + cards.get(i).getHealth() + ", " + cards.get(i).getManaCost());
+		}
 	}
 }
