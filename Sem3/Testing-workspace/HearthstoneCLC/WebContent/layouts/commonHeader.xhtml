@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition>
+	
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+        <h4 class="navbar-brand" >HearthstoneAPI</h4>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="navbarNavDropdown" class="navbar-collapse collapse">
+        
+        	<c:if test="${!empty user.username}">
+        		<ul class="navbar-nav mr-auto">            
+	       			<li class="nav-item"><a class="nav-link" href="homePage.xhtml">Home</a></li> 
+	            </ul>      	
+        	</c:if>
+            
+            <c:if test="${empty user.username}">
+	            <ul class="navbar-nav ml-auto" style="align-self: auto;">
+	            	<li class="nav-item"><a class="nav-link" href='loginForm.xhtml'>Login</a></li>            	
+	            	<li class="nav-item"><a class="nav-link" href='registerForm.xhtml'>Register</a></li>
+	            </ul>
+            </c:if>
+            
+            <c:if test="${!empty user.username}">
+                <h:form class="form" method="post">
+	                    <h:commandButton value="Logout" class="btn btn-info btn-md" action="#{loginController.OnLogoff()}" />                                                
+			    </h:form> 
+            </c:if>
+            
+        </div>        
+	</nav>		
+	</ui:composition>
+</html>

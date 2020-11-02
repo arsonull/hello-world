@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head>
+</h:head> 
+
+<body>
+	<ui:composition template = "/layouts/commonLayout.xhtml">
+	<ui:define name="content">
+	
+	<div align="center">
+		<h2>Welcome ${user.username} to HearthstoneAPI </h2>
+	</div> 
+		
+	<div id="login">
+<!--    <h3 class="text-center text-white pt-5">Login form</h3> --> <br/><br/>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                    
+                        <h:form id="login-form" class="form" method="post">
+                            <h3 class="text-center text-info">Click button below to load a Tabular and a Graph Chart</h3>                         
+                            
+                            <div class="form-group">
+                                <h:commandButton value="Load Graphs" class="btn btn-info btn-md" action="#{graphController.loadCardData}" />                                
+                            </div>
+                            
+                        </h:form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+		
+	</ui:define>
+	</ui:composition>
+</body> 
+
+</html>
