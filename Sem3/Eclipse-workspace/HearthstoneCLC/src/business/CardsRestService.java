@@ -3,6 +3,7 @@ package business;
 import java.util.List;
 
 import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -21,7 +22,8 @@ import beans.ResponseDataModel;
 @Path("/cards")
 public class CardsRestService
 {
-	CardService service = new CardService();
+	@Inject
+	CardBusinessInterface service;
     
     @POST
     @Path("/update")
@@ -33,7 +35,7 @@ public class CardsRestService
     	System.out.println("Post read");
         /*List<Card> cardList = cards.getCards();
         service.create(cardList);*/
-    	cards.print();
+    	System.out.println(cards.getCards());
     	try
     	{
     		if (service.create(cards.getCards()))

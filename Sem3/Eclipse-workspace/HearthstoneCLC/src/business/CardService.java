@@ -27,18 +27,24 @@ public class CardService implements CardBusinessInterface{
         String url = "jdbc:mysql://localhost:3306/HearthstoneAPI";
         String username = "root";
         String password = "root";
-        System.out.println("after connection");
 
         //try the connection
         try {
             //Connect to database
-            conn = DriverManager.getConnection(url, username, password);
-            System.out.println("after creation");
-            //add all cards to database
-            boolean addCards = service.create(cards, conn);
-            System.out.println("before return");
+            conn = DriverManager.getConnection(url, username, password);    
+	    	//boolean that returns whether the addCards process was a success or not
+	    	boolean addCards = service.create(cards, conn);
 
-            return addCards;
+			conn.close();
+			
+	    	if(addCards == true){	
+                System.out.println("returning with true");
+		    	return true;
+	    	}else {
+                System.out.println("returning with false");
+	    		return false;
+	    	}
+
         }catch(Exception e) {
             e.printStackTrace();
             //should not return false
@@ -60,7 +66,7 @@ public class CardService implements CardBusinessInterface{
         try {
             //Connect to database
             conn = DriverManager.getConnection(url, username, password);
-            //Make 2 users. One to call instance of loginDAO and return information back.
+            //returnedList will contain graph information about # of cards and mana cost
             int[] returnedList = service.findAll(conn);
 
             return returnedList;
@@ -72,6 +78,7 @@ public class CardService implements CardBusinessInterface{
 
     }
     
+    @Override
     public Cards getAll()
     {
     	java.sql.Connection conn = null;

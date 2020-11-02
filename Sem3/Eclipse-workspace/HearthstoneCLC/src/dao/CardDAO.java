@@ -19,33 +19,37 @@ public class CardDAO implements CardDAOInterface<Card>{
 	@Override
 	public boolean create(List<Card> cards, Connection conn) {
 		System.out.println("Entered create() in CardDAO");
-
+		int rs = 0;
 		// Insert Cards received from IoT Application into database
 		try {			
 			Statement stmt1 = conn.createStatement();
 
 			for (Card card : cards) {
-				String sql1 = String.format("INSERT INTO CARDS(NAME, HEALTH, MANACOST) VALUES('%s', '%s', %d)", card.getName(), card.getHealth(), card.getManaCost());
-				
-				stmt1.executeUpdate(sql1);
-			}
-			
+				String sql1 = "INSERT INTO CARDS(NAME, HEALTH, MANACOST)VALUES('"+card.getName()+"', '"+card.getHealth()+"', '"+card.getManaCost()+"')";
+
+		    	rs = stmt1.executeUpdate(sql1);
+
+			}		
 			stmt1.close();
+	    	if(rs == 1){		    	
+		    	return true;
+	    	}else {
+	    		return false;
+	    	}
 
 		}catch(Exception e) {
     		e.printStackTrace();
+    		return false;
 	    }finally {
 	    	if(conn != null) {
 	    		try {
 	    			conn.close();
 	    		}catch(SQLException e){
 	    			e.printStackTrace();
+	    			return false;
 	    		}
 	    	}
 	    }
-		
-		// Return OK
-		return true;
 		
 	}
 
@@ -64,8 +68,9 @@ public class CardDAO implements CardDAOInterface<Card>{
 			
 			while(rs1.next()) {
 				// Get the card
-				Card card = new Card(rs1.getString("CARDNAME"), rs1.getInt("HEALTH"), rs1.getInt("MANACOST")); 
-				
+				Card card = new Card(rs1.getString("NAME"), rs1.getInt("HEALTH"), rs1.getInt("MANACOST")); 
+				System.out.println("Card name: " + card.getName()+ " Mana: " + card.getManaCost());
+
 				//switch case is used instead of writing 10 different SQL statements			
 				switch(card.getManaCost()) {
 					case 0: 
@@ -98,9 +103,6 @@ public class CardDAO implements CardDAOInterface<Card>{
 					case 9: 
 						cardList[9]++;
 						break;
-					case 10: 
-						cardList[10]++;
-						break;
 				}
 			}		
 			
@@ -117,6 +119,7 @@ public class CardDAO implements CardDAOInterface<Card>{
 	    			e.printStackTrace();
 	    		}
 	    	}
+	    	
 	    }
 		
 		return cardList;
@@ -134,7 +137,7 @@ public class CardDAO implements CardDAOInterface<Card>{
 			ResultSet rs = stmt.executeQuery(sql);
 			while(rs.next())
 			{
-				Card card = new Card(rs.getString("CARDNAME"), rs.getInt("HEALTH"), rs.getInt("MANACOST"));
+				Card card = new Card(rs.getString("NAME"), rs.getInt("HEALTH"), rs.getInt("MANACOST"));
 				cards.add(card);
 			}
 			return cards;

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.faces.context.FacesContext"/>
-<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
 <fullyQualifiedTypeName name="javax.faces.bean.ViewScoped"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Size"/>
@@ -25,4 +24,10 @@
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="beans.Cards"/>
+<fullyQualifiedTypeName name="javax.faces.bean.ManagedBean"/>
+<fullyQualifiedTypeName name="javax.faces.bean.SessionScoped"/>
+<fullyQualifiedTypeName name="org.primefaces.model.charts.bar.BarChartModel"/>
+<fullyQualifiedTypeName name="business.CardService"/>
+<fullyQualifiedTypeName name="org.primefaces.model.charts.pie.PieChartModel"/>
+<fullyQualifiedTypeName name="org.primefaces.model.charts.ChartData"/>
 </qualifiedTypeNameHistroy>

@@ -5,7 +5,8 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:p="http://primefaces.org/ui"> 
 
-<h:head>
+<h:head>    	
+	<h:outputStylesheet library="css" name="table-style.css" />
 </h:head> 
 
 <body>
@@ -13,41 +14,40 @@
 	<ui:define name="content">
 	
 		<div align="center">
-			<h2>${user.username} to HearthstoneAPI </h2>
+			<br/>
+			<h5>Here you will find two charts. One tabular and one bar graph. Both represent the number of cards found for each Mana cost</h5>
 		</div> 
 		
 		<!-- Tabular chart using JSF's built in data table -->
-		<h:dataTable value = "#{model.modelList}" var = "modelObject"
+		<h:dataTable value = "#{cards}" var = "card"
 		   styleClass = "cardsTable"
 		   headerClass = "cardsTableHeader"
 		   rowClasses = "cardsTableOddRow,cardsTableEvenRow">
-		   
+
 		   <h:column>    				
-		      <f:facet name = "header">variable1</f:facet>    				
-		      #{modelObject.variable1}
+		      <f:facet name = "header">Mana Cost = 1</f:facet>    				
+		      #{card.printInt(1)}		      
 		   </h:column>
-		   
-		   <h:column>
-		      <f:facet name = "header">variable2</f:facet>
-		      #{modelObject.variable2}
+		   <h:column>    				
+		      <f:facet name = "header">Mana Cost = 2</f:facet>    				
+		      #{card.printInt(2)}		      
 		   </h:column>
-		   
-		   <h:column>
-		      <f:facet name = "header">variable3</f:facet>
-		      #{modelObject.variable3}
+		   <h:column>    				
+		      <f:facet name = "header">Mana Cost = 3</f:facet>    				
+		      #{card.printInt(3)}		      
 		   </h:column>
-		   
-		   <h:column>
-		      <f:facet name = "header">variable4</f:facet>
-		      #{modelObject.variable4}
-		   </h:column>
+
 		</h:dataTable>
 		
-		<br/><br/><br/>
+		<br/><br/>
 		
-		<!-- Bar graph using PrimeFaces Library -->
-		<p:chart type="bar" model="#{bean.model}" style="height:300px"/>
-			
+				<!-- Bar graph using PrimeFaces Library -->
+		<div align="center">
+			<p:fieldset legend="Bar Chart">
+  				<p:chart type="bar" model="#{graphController.manaModel}"/>			
+			</p:fieldset>
+		</div> 
+	
 		
 	</ui:define>
 	</ui:composition>
