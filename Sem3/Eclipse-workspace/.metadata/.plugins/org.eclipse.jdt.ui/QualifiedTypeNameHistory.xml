@@ -8,9 +8,6 @@
 <fullyQualifiedTypeName name="javax.validation.constraints.Min"/>
 <fullyQualifiedTypeName name="javax.validation.constraints.Max"/>
 <fullyQualifiedTypeName name="java.net.MalformedURLException"/>
-<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
-<fullyQualifiedTypeName name="javax.ejb.Local"/>
-<fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="java.sql.DriverManager"/>
 <fullyQualifiedTypeName name="java.sql.Statement"/>
@@ -19,12 +16,20 @@
 <fullyQualifiedTypeName name="util.TracksNotFoundException"/>
 <fullyQualifiedTypeName name="data.MusicDataService"/>
 <fullyQualifiedTypeName name="util.AlbumNotFoundException"/>
-<fullyQualifiedTypeName name="javax.inject.Inject"/>
-<fullyQualifiedTypeName name="business.MusicManagerInterface"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="javax.ws.rs.POST"/>
 <fullyQualifiedTypeName name="beans.Card"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="dao.CardDAO"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="javax.inject.Inject"/>
+<fullyQualifiedTypeName name="javax.ejb.EJB"/>
+<fullyQualifiedTypeName name="data.DataAccessInterface"/>
+<fullyQualifiedTypeName name="business.MusicManagerInterface"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="beans.Track"/>
+<fullyQualifiedTypeName name="beans.Album"/>
+<fullyQualifiedTypeName name="javax.ejb.Stateless"/>
+<fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
+<fullyQualifiedTypeName name="javax.ejb.Local"/>
+<fullyQualifiedTypeName name="javax.enterprise.inject.Alternative"/>
 </qualifiedTypeNameHistroy>
