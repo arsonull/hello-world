@@ -36,12 +36,12 @@ public class MusicManager implements MusicManagerInterface
      */
     public MusicManager()
     {
-    	trackInfo = new HashMap<String, List<Track>>();
+    	/*trackInfo = new HashMap<String, List<Track>>();
     	List<Track> tracks1 = new ArrayList<Track>();
     	tracks1.add(new Track("Taxman", 1));
     	tracks1.add(new Track("Eleanor Rigby", 2));
     	
-    	trackInfo.put("The Beatles - Revolver - 1966", tracks1);
+    	trackInfo.put("The Beatles - Revolver - 1966", tracks1);*/
     }
 
 	/**
@@ -56,7 +56,7 @@ public class MusicManager implements MusicManagerInterface
 		//MusicDataService dao = new MusicDataService();
     	album.setTracks(tf.getTracks(album));
     	
-		Album album2 = dao.findBy(album);
+		/*Album album2 = dao.findBy(album);
 		if (album2 == null)
 		{
 			System.out.println("====================> Album does not exist");
@@ -66,7 +66,7 @@ public class MusicManager implements MusicManagerInterface
 		else
 		{
 			System.out.println("=====================> Album already exists");
-		}
+		}*/
 		//Step 4 return the album
         return album;
     }
