@@ -528,7 +528,7 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_2mnxPyVMEeuRN4MnWj61Qw" elementId="org.eclipse.ui.editorss" selectedElement="_2mnxQCVMEeuRN4MnWj61Qw">
-      <children xsi:type="basic:PartStack" xmi:id="_2mnxQCVMEeuRN4MnWj61Qw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_8LXYECedEeuzHadLLpiRkA">
+      <children xsi:type="basic:PartStack" xmi:id="_2mnxQCVMEeuRN4MnWj61Qw" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_XZYBgCeeEeuzHadLLpiRkA">
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
@@ -539,18 +539,18 @@
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_XZYBgCeeEeuzHadLLpiRkA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MusicManager.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MusicManager.java&quot; partName=&quot;MusicManager.java&quot; title=&quot;MusicManager.java&quot; tooltip=&quot;Assignment7a/src/business/MusicManager.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Assignment7a/src/business/MusicManager.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1476&quot; selectionTopPixel=&quot;366&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;MusicManager.java&quot; partName=&quot;MusicManager.java&quot; title=&quot;MusicManager.java&quot; tooltip=&quot;Assignment7a/src/business/MusicManager.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Assignment7a/src/business/MusicManager.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1476&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>active</tags>
+          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_8LXYECedEeuzHadLLpiRkA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TrackFinder1.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TrackFinder1.java&quot; partName=&quot;TrackFinder1.java&quot; title=&quot;TrackFinder1.java&quot; tooltip=&quot;Assignment7a/src/business/TrackFinder1.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Assignment7a/src/business/TrackFinder1.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;982&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>active</tags>
-          <tags>activeOnClose</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_5_TQgCeaEeuzHadLLpiRkA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="AddAlbumResponse.xhtml" iconURI="platform:/plugin/org.eclipse.wst.html.ui/icons/full/obj16/sourceEditor.gif" closeable="true">
           <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wst.html.core.htmlsource.source&quot; name=&quot;AddAlbumResponse.xhtml&quot; partName=&quot;AddAlbumResponse.xhtml&quot; title=&quot;AddAlbumResponse.xhtml&quot; tooltip=&quot;Assignment7a/WebContent/AddAlbumResponse.xhtml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/Assignment7a/WebContent/AddAlbumResponse.xhtml&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;855&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
@@ -824,7 +824,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_2moXHiVMEeuRN4MnWj61Qw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_dl1vUCeUEeuzHadLLpiRkA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_2mrZ8yVMEeuRN4MnWj61Qw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_z1yJMCfJEeugBu7HbVyzVA" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_2mrZ8yVMEeuRN4MnWj61Qw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_2moXKyVMEeuRN4MnWj61Qw" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -846,7 +846,7 @@
       <children xsi:type="menu:ToolBar" xmi:id="_2moXcSVMEeuRN4MnWj61Qw" elementId="org.eclipse.jdt.ui.JavaElementCreationActionSet" visible="false">
         <tags>Draggable</tags>
       </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_2moXciVMEeuRN4MnWj61Qw" elementId="org.eclipse.ui.edit.text.actionSet.presentation" visible="false">
+      <children xsi:type="menu:ToolBar" xmi:id="_2moXciVMEeuRN4MnWj61Qw" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_2moXfSVMEeuRN4MnWj61Qw" elementId="org.eclipse.debug.ui.launchActionSet">
@@ -873,10 +873,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_2moXlyVMEeuRN4MnWj61Qw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_dl4yoSeUEeuzHadLLpiRkA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_2mq2rSVMEeuRN4MnWj61Qw"/>
-      </children>
-      <children xsi:type="menu:ToolBar" xmi:id="_2moXoSVMEeuRN4MnWj61Qw" elementId="org.eclipse.jdt.ui.CompilationUnitEditor">
-        <tags>Draggable</tags>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_z10lcSfJEeugBu7HbVyzVA" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_2mq2rSVMEeuRN4MnWj61Qw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_2moXoyVMEeuRN4MnWj61Qw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

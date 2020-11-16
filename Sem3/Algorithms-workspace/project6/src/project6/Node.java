@@ -40,4 +40,18 @@ public class Node
 	{
 		return data;
 	}
+	public void setData(String s)
+	{
+		data = s;
+	}
+	public boolean hasLeft()
+	{
+		if (left != null) return true;
+		else return false;
+	}
+	public boolean hasRight()
+	{
+		if (right != null) return true;
+		else return false;
+	}
 }
