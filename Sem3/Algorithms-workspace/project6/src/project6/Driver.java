@@ -17,6 +17,7 @@ public class Driver
 			BufferedReader br = new BufferedReader(new FileReader("TreeWords.txt"));
 			Scanner sc = new Scanner(System.in);
 			String line;
+			//Adds each line from the file to the tree as Nodes
 			while ((line = br.readLine()) != null)
 			{
 				Node n = new Node(line);
@@ -24,6 +25,7 @@ public class Driver
 			}
 			myTree.display();
 			
+			//Initialize an int for choice, and a string for words to search or delete
 			int in = 1;
 			String sin;
 			while (in > 0)

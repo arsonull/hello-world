@@ -20,7 +20,7 @@ public class Tree
 		return root;
 	}
 	
-	public void addNode(Node n)
+	public void addNode(Node n) //O(log(n))
 	{
 		if (root != null)
 		{
@@ -70,7 +70,7 @@ public class Tree
 			root = n;
 		}
 	}
-	private boolean addNode(Node n, Node r)
+	private boolean addNode(Node n, Node r) //O(log(n))
 	{
 		if (n.getData().compareTo(r.getData()) < 0)
 		{
@@ -111,21 +111,21 @@ public class Tree
 		return false;
 	}
 	
-	public void display()
+	public void display() //O(n)
 	{
 		if (root.hasLeft()) displayHelper(root.getLeft());
 		System.out.print(root.getData() + " ");
 		if (root.hasRight()) displayHelper(root.getRight());
 		System.out.println();
 	}
-	private void displayHelper(Node r)
+	private void displayHelper(Node r) //O(n)
 	{
 		if (r.hasLeft()) displayHelper(r.getLeft());
 		System.out.print(r.getData() + " ");
 		if (r.hasRight()) displayHelper(r.getRight());
 	}
 	
-	public String search(String s)
+	public String search(String s)//O(log(n))
 	{
 		counter = 1;
 		if (root.getData().compareTo(s) == 0) return "" + s + " was found at the root";
@@ -156,7 +156,7 @@ public class Tree
 		}
 		return "" + s + " was not found";
 	}
-	private boolean searchHelper(String s, Node n)
+	private boolean searchHelper(String s, Node n)//O(log(n))
 	{
 		int c = s.compareTo(n.getData());
 		if (c == 0) return true;
@@ -169,12 +169,12 @@ public class Tree
 		}
 	}
 	
-	public void delete(String s)
+	public void delete(String s)//O(log(n))
 	{
 		root = deleteHelper(s, root);
 	}
 	
-	private Node deleteHelper(String s, Node n)
+	private Node deleteHelper(String s, Node n)//O(log(n))
 	{
 		//Solves null pointers
 		if (n == null) return n;
@@ -204,34 +204,12 @@ public class Tree
 		}
 		return n;
 	}
-	//This gets the node we're doing to delete
-	private Node searchNode(String s, Node n)
-	{
-		int c = s.compareTo(n.getData());
-		if (c == 0) return n;
-		else
-		{
-			if (c > 0 && n.hasLeft()) return searchNode(s, n.getLeft());
-			else if (c < 0 && n.hasRight()) return searchNode(s, n.getRight());
-			else return null;
-		}
-		
-	}
 	//This gets the node we're going to place the deleted node with
-	private Node minVal(Node n)
+	private Node minVal(Node n) //O(n)
 	{
 		while (n.getLeft().hasLeft())
 		{
 			n = n.getLeft();
-		}
-		return n;
-	}
-	
-	private Node minValRight(Node n)
-	{
-		while (n.getRight().hasRight())
-		{
-			n = n.getRight();
 		}
 		return n;
 	}
