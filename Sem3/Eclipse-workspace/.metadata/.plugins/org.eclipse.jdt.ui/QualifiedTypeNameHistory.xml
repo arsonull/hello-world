@@ -32,4 +32,10 @@
 <fullyQualifiedTypeName name="javax.ejb.LocalBean"/>
 <fullyQualifiedTypeName name="javax.ejb.Local"/>
 <fullyQualifiedTypeName name="javax.enterprise.inject.Alternative"/>
+<fullyQualifiedTypeName name="javax.interceptor.InvocationContext"/>
+<fullyQualifiedTypeName name="javax.interceptor.AroundInvoke"/>
+<fullyQualifiedTypeName name="util.LoggingInterceptor"/>
+<fullyQualifiedTypeName name="javax.interceptor.Interceptors"/>
+<fullyQualifiedTypeName name="javax.inject.Named"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
 </qualifiedTypeNameHistroy>
