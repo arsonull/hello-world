@@ -23,7 +23,7 @@ public class Node
 	
 	public void setNext(Node n)
 	{
-		this.next = n;
+		next = n;
 	}
 	public Node getNext()
 	{
