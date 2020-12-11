@@ -29,7 +29,7 @@ public class MusicDataService implements DataAccessInterface<Album>
     /**
      * Default constructor. 
      */
-    public MusicDataService() 
+    public MusicDataService()
     {
     }
 
@@ -44,7 +44,7 @@ public class MusicDataService implements DataAccessInterface<Album>
     /**
      * CRUD: finder to return all entities
      */
-    public List<Album> findAll() 
+    public List<Album> findAll()
     {
 		// DB Connection Info
 		Connection conn = null;

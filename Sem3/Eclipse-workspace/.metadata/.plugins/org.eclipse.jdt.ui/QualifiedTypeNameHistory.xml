@@ -38,4 +38,9 @@
 <fullyQualifiedTypeName name="javax.interceptor.Interceptors"/>
 <fullyQualifiedTypeName name="javax.inject.Named"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="beans.SampleLeeroy"/>
+<fullyQualifiedTypeName name="beans.SampleJaraxxus"/>
+<fullyQualifiedTypeName name="beans.SampleTirion"/>
+<fullyQualifiedTypeName name="business.SampleCardFactory"/>
+<fullyQualifiedTypeName name="beans.SampleCardInterface"/>
 </qualifiedTypeNameHistroy>
