@@ -1,9 +1,10 @@
 package project8;
 
+import java.util.Stack;
+
 public class Map
 {
 	private int[][] map = new int[15][15];
-	private int total = 0;
 	
 	public Map()
 	{
@@ -75,19 +76,21 @@ public class Map
 	
 	public int myGetDistance(int start, int end)
 	{
+		//m is the current index, start is where we started
 		int m = end;
 		int total = 0;
+		//If the first searched nodes are the correct node, then return the distance between those and nothing else
 		if (map[start][end] > 0)
 		{
 			return map[start][end];
 		}
+		//while the start and current index nodes aren't connected, increment the current index until there is a match with something. Then feeds those new nodes back into the while loop
 		while (map[start][m] == 0)
 		{
 			if (m == 15) m = -1;
 			m += 1;
 			while (map[start][m] == 0) m += 1;
 			total += map[start][m];
-			//System.out.println(start + " " + m + ": " + map[start][m] + " and total " + total);
 			start = m;
 			m = end;
 			if (map[start][m] > 0)
@@ -100,6 +103,62 @@ public class Map
 		return 0;
 	}
 	
+	public int dijkstraPath(int s, int k)
+	{
+		int dist[] = new int[15];
+		int[][] graph = map;
+		int src = s;
+		Boolean[] sptSet = new Boolean[15];
+		for (int i = 0; i < 15; i++)
+		{
+			dist[i] = Integer.MAX_VALUE;
+			sptSet[i] = false;
+		}
+		dist[src] = 0;
+		
+		for (int count = 0; count < 14; count++)
+		{
+			int min = minDist(dist, sptSet);
+			 sptSet[min] = true;
+			 
+			 for (int i = 0; i < 15; i++)
+			 {
+				 if (!sptSet[i] && graph[min][i] != 0 && dist[min] != Integer.MAX_VALUE && dist[min] + graph[min][i] < dist[i])
+				 {
+	                    dist[i] = dist[min] + graph[min][i];
+				 }
+			 }
+		}
+		return dist[k];
+	}
+	
+	private int minDist(int[] dist, Boolean[] sptSet)
+	{
+		int min = Integer.MAX_VALUE;
+		int min_index = -1;
+		
+		for (int i = 0; i < 15; i++)
+		{
+			if (sptSet[i] == false && dist[i] <= min)
+			{
+				min = dist[i];
+				min_index = i;
+			}
+		}
+		return min_index;
+	}
+	
+	/*private int numberNeighbors(int i)
+	{
+		int count = 0;
+		for (int j = 0; j < 15; j++)
+		{
+			if (map[i][j] != 0) count++;
+		}
+		return count;
+	}*/
+	
+	//simple display for a 2 dimensional array
 	public void display()
 	{
 		for (int i = 0; i < 15; i++)
@@ -111,7 +170,7 @@ public class Map
 			System.out.println();
 		}
 	}
-	
+	//prints out each node a node is connected to
 	public void getNeighbor(int i)
 	{
 		for (int j = 0; j < 15; j++)

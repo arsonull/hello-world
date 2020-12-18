@@ -10,16 +10,16 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class Cards{
 	List<Card> cards;
-	int[] manaList;
+	int[] cardList;
 
 	public Cards(){
 		cards = new ArrayList<Card>();
-		manaList = new int[] {0,0,0,0,0,0,0,0,0,0};
+		cardList = new int[] {0,0,0};
 	}
 	
 	public Cards(List<Card> cards){
 		this.cards = cards;
-		manaList = new int[] {0,0,0,0,0,0,0,0,0,0};
+		cardList = new int[] {0,0,0};
 	}
 	
 	public void add(Card c){
@@ -31,10 +31,10 @@ public class Cards{
 	}
 	
 	public int[] getCardList() {
-		return manaList;
+		return cardList;
 	}
 	public void setCardList(int[] cardList) {
-		this.manaList = cardList;
+		this.cardList = cardList;
 	}	
 	
 	public void print(){
@@ -42,9 +42,10 @@ public class Cards{
 			System.out.println(cards.get(i).getName() + ", " + cards.get(i).getHealth() + ", " + cards.get(i).getManaCost());
 		}
 	}
-	public String printInt(Long i){
-        int I = Math.toIntExact(i);
-        String cardInt = "" + manaList[I]+ "";
-        return cardInt;
-    }
+	public String printInt(Long i){	
+		int I = Math.toIntExact(i);
+		String cardInt = "" + cardList[I]+ "";
+		return cardInt;		
+	}
+	
 }

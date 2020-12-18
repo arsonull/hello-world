@@ -8,10 +8,13 @@ import java.util.List;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 
 import beans.Card;
 import beans.Cards;
+import util.LoggingInterceptor;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @Stateless
 @Local(CardDAOInterface.class)
 public class CardDAO implements CardDAOInterface<Card>{
@@ -31,9 +34,11 @@ public class CardDAO implements CardDAOInterface<Card>{
 
 			}		
 			stmt1.close();
+			//if execute update incremented rs then the action was successful, return true
 	    	if(rs == 1){		    	
 		    	return true;
 	    	}else {
+	    		//otherwise exectueUpdate didn't work. Check logic above
 	    		return false;
 	    	}
 
@@ -58,7 +63,7 @@ public class CardDAO implements CardDAOInterface<Card>{
 		System.out.println("Entered findAll() in CardDAO");
 		// multiple SQL statements to retrieve number of cards for each mana cost variable: Mana=1 ~ 50 cards.....
 		
-		int[] cardList = new int[] {0,0,0,0,0,0,0,0,0,0};
+		int[] cardList = new int[] {0,0,0};
 		try {
 			
 			// Execute SQL Query and loop over result set
@@ -71,37 +76,16 @@ public class CardDAO implements CardDAOInterface<Card>{
 				Card card = new Card(rs1.getString("NAME"), rs1.getInt("HEALTH"), rs1.getInt("MANACOST")); 
 				System.out.println("Card name: " + card.getName()+ " Mana: " + card.getManaCost());
 
-				//switch case is used instead of writing 10 different SQL statements			
+				//switch case is used instead to increment number of cards found in each position			
 				switch(card.getManaCost()) {
-					case 0: 
+					case 1: 
 						cardList[0]++;
 						break;
-					case 1: 
+					case 2: 
 						cardList[1]++;
 						break;
-					case 2: 
-						cardList[2]++;
-						break;
 					case 3: 
-						cardList[3]++;
-						break;
-					case 4: 
-						cardList[4]++;
-						break;
-					case 5: 
-						cardList[5]++;
-						break;						
-					case 6: 
-						cardList[6]++;
-						break;
-					case 7: 
-						cardList[7]++;
-						break;
-					case 8: 
-						cardList[8]++;
-						break;
-					case 9: 
-						cardList[9]++;
+						cardList[2]++;
 						break;
 				}
 			}		
@@ -119,12 +103,12 @@ public class CardDAO implements CardDAOInterface<Card>{
 	    			e.printStackTrace();
 	    		}
 	    	}
-	    	
 	    }
 		
 		return cardList;
 	}
 
+	//this method is used to return all cards from DAO
 	@Override
 	public Cards getAll(Connection conn)
 	{
@@ -140,6 +124,7 @@ public class CardDAO implements CardDAOInterface<Card>{
 				Card card = new Card(rs.getString("NAME"), rs.getInt("HEALTH"), rs.getInt("MANACOST"));
 				cards.add(card);
 			}
+			//return a Cards objects which holds a list of card
 			return cards;
 		}
 		catch (Exception e)

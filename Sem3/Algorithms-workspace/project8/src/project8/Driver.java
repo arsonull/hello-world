@@ -8,5 +8,6 @@ public class Driver
 		map.display();
 		map.getNeighbor(3);
 		System.out.println("The distance between 0 and 7 is " + map.myGetDistance(0, 7));
+		System.out.println("The shortest distance between 1 and 9 is " + map.dijkstraPath(1, 9));
 	}
 }

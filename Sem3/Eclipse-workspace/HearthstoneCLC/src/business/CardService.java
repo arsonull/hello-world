@@ -6,11 +6,14 @@ import java.util.List;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.interceptor.Interceptors;
 
 import dao.CardDAOInterface;
+import util.LoggingInterceptor;
 import beans.Card;
 import beans.Cards;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @Stateless
 @Local(CardBusinessInterface.class)
 public class CardService implements CardBusinessInterface{

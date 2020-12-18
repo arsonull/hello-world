@@ -6,15 +6,19 @@ import java.sql.SQLException;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import dao.loginDataAccessInterface;
+import javax.interceptor.Interceptors;
+
+import dao.LoginDAOInterface;
+import util.LoggingInterceptor;
 import beans.User;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @Stateless
 @Local(loginBusinessInterface.class)
-public class loginService implements loginBusinessInterface{
+public class LoginService implements loginBusinessInterface{
 	
 	@Inject
-	loginDataAccessInterface<User> service;
+	LoginDAOInterface<User> service;
 
 	public User loginUser(User user) {
 		System.out.println("Entered loginUser() in loginService");

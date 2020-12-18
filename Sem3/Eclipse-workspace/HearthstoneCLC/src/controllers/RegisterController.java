@@ -4,16 +4,19 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
+import javax.interceptor.Interceptors;
 
 import beans.User;
-import business.registerBusinessInterface;
+import business.RegisterBusinessInterface;
+import util.LoggingInterceptor;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @ManagedBean
 @ViewScoped
 public class RegisterController {
 	
 	@Inject 
-	registerBusinessInterface service;
+	RegisterBusinessInterface service;
 	
 	public String onRegister(User user){						
 		System.out.println("Register Controller User: " + user.getUsername() + " email: " + user.getEmail());
@@ -34,7 +37,7 @@ public class RegisterController {
 		}			
 	}
 	
-	public registerBusinessInterface getService() {
+	public RegisterBusinessInterface getService() {
 		return service;
 	}
 	

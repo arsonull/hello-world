@@ -1,56 +1,59 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml"
+<h:html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"> 
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:h="http://java.sun.com/jsf/html">  
 
-<h:head>    	
-	<h:outputStylesheet library="css" name="table-style.css" />
-</h:head> 
+<h:head>
+	<h:outputStylesheet library = "css" name = "table.css"  /> 	
+</h:head>
 
-<body>
+<h:body>
 	<ui:composition template = "/layouts/commonLayout.xhtml">
 	<ui:define name="content">
 	
 		<div align="center">
 			<br/>
 			<h5>Here you will find two charts. One tabular and one bar graph. Both represent the number of cards found for each Mana cost</h5>
-		</div> 
+		</div> 		
+		<br/>
+		<h:form>
+			<div id="dataTable">
+				<!-- Tabular chart using JSF's built in data table -->
+				<h:dataTable value = "#{cardsList}" var = "card" 
+				styleClass = "cardsTable"
+			   	headerClass = "cardsTableHeader"
+			   	rowClasses = "cardsTableOddRow,cardsTableEvenRow">
 		
-		<!-- Tabular chart using JSF's built in data table -->
-		<h:dataTable value = "#{cards}" var = "card"
-		   styleClass = "cardsTable"
-		   headerClass = "cardsTableHeader"
-		   rowClasses = "cardsTableOddRow,cardsTableEvenRow">
-
-		   <h:column>    				
-		      <f:facet name = "header">Mana Cost = 1</f:facet>    				
-		      #{card.printInt(1)}		      
-		   </h:column>
-		   <h:column>    				
-		      <f:facet name = "header">Mana Cost = 2</f:facet>    				
-		      #{card.printInt(2)}		      
-		   </h:column>
-		   <h:column>    				
-		      <f:facet name = "header">Mana Cost = 3</f:facet>    				
-		      #{card.printInt(3)}		      
-		   </h:column>
-
-		</h:dataTable>
+				   <h:column>    				
+				      <f:facet name = "header">Mana Cost = 1</f:facet>    				
+				      #{card.printInt(0)}		      
+				   </h:column>
+				   <h:column>    				
+				      <f:facet name = "header">Mana Cost = 2</f:facet>    				
+				      #{card.printInt(1)}		      
+				   </h:column>
+				   <h:column>    				
+				      <f:facet name = "header">Mana Cost = 3</f:facet>    				
+				      #{card.printInt(2)}		      
+				   </h:column>
+		
+				</h:dataTable>
+			</div>
+		</h:form>
 		
 		<br/><br/>
 		
-				<!-- Bar graph using PrimeFaces Library -->
-		<div align="center">
-			<p:fieldset legend="Bar Chart">
-  				<p:chart type="bar" model="#{graphController.manaModel}"/>			
-			</p:fieldset>
-		</div> 
-	
+ 		<!-- Pie chart using Prime-faces Open Source Charting Library -->		
+ 		<div>
+ 			<p:panel> 			
+ 				 <p:chart type="pie" model="#{pieBean.pieModel}" />
+ 				 <p>Hover over pie chart to see statistics</p>
+ 			</p:panel>
+ 		</div>		
 		
 	</ui:define>
-	</ui:composition>
-</body> 
+	</ui:composition>	 								
+</h:body> 
 
-</html>
+</h:html>

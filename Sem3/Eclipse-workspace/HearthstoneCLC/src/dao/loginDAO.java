@@ -7,12 +7,15 @@ import java.sql.Statement;
 
 import javax.ejb.Local;
 import javax.ejb.Stateless;
+import javax.interceptor.Interceptors;
 
 import beans.User;
+import util.LoggingInterceptor;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @Stateless
-@Local(loginDataAccessInterface.class)
-public class loginDAO implements loginDataAccessInterface<User>{
+@Local(LoginDAOInterface.class)
+public class LoginDAO implements LoginDAOInterface<User>{
 	
 	public User loginUser(User user, java.sql.Connection conn) {
 		System.out.println("Entered loginUser() in loginDAO");

@@ -10,7 +10,6 @@ public class Card {
 	String name;
 	int health;
 	int manaCost;
-	String cardType;
 	
 	//Default constructor
 	public Card() {}

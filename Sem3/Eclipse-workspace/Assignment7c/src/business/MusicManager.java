@@ -96,17 +96,5 @@ public class MusicManager implements MusicManagerInterface
     		return album2;
     	}
     }
-    /*private List<Track> getTracks(Album album)
-    {
-    	String key = album.getArtist() + " - " + album.getTitle() + " - " + album.getYear();
-    	if (trackInfo.containsKey(key))
-    	{
-    		return trackInfo.get(key);
-    	}
-    	else
-    	{
-    		return new ArrayList<Track>();
-    	}
-    }*/
 
 }

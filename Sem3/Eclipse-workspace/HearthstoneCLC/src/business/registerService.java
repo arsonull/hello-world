@@ -5,15 +5,19 @@ import java.sql.DriverManager;
 import javax.ejb.Local;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import dao.registerDataAccessInterface;
+import javax.interceptor.Interceptors;
+
+import dao.RegisterDAOInterface;
+import util.LoggingInterceptor;
 import beans.User;
 
+@Interceptors(LoggingInterceptor.class) //allows for this class to be intercepted
 @Stateless
-@Local(registerBusinessInterface.class)
-public class registerService implements registerBusinessInterface {
+@Local(RegisterBusinessInterface.class)
+public class RegisterService implements RegisterBusinessInterface {
 
 	@Inject
-	registerDataAccessInterface<User> service;
+	RegisterDAOInterface<User> service;
 	
 	public boolean registerUser(User user) {
 		System.out.println("Entered registerUser() in registerService");
@@ -30,10 +34,11 @@ public class registerService implements registerBusinessInterface {
 			System.out.println("RegisterCompletion: " + registerCompletion);
 
 			conn.close();
-			
+			//if register was a success then return true
 	    	if(registerCompletion == true){		    	
 		    	return true;
-	    	}else {
+	    	}else {   
+	    		//otherwise return false. Check DAO
 	    		return false;
 	    	}
 	    	
