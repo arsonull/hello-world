@@ -105,30 +105,35 @@ public class Map
 	
 	public int dijkstraPath(int s, int k)
 	{
+		//Create a local int array that ties along with a boolean array to correlate whether that node has been visited or not
 		int dist[] = new int[15];
 		int[][] graph = map;
 		int src = s;
 		Boolean[] sptSet = new Boolean[15];
 		for (int i = 0; i < 15; i++)
 		{
+			//Set each value for the int array is set to max, so every number is less than that value. The boolean array is then set all to false
 			dist[i] = Integer.MAX_VALUE;
 			sptSet[i] = false;
 		}
+		//The distance to the source node is always 0
 		dist[src] = 0;
-		
+		//For loop counting for the size - 1 of the 2dimensional array
 		for (int count = 0; count < 14; count++)
 		{
+			//find the min distance between the source and the current index' node. Then set that node to true in the boolean array
 			int min = minDist(dist, sptSet);
-			 sptSet[min] = true;
-			 
-			 for (int i = 0; i < 15; i++)
-			 {
-				 if (!sptSet[i] && graph[min][i] != 0 && dist[min] != Integer.MAX_VALUE && dist[min] + graph[min][i] < dist[i])
-				 {
-	                    dist[i] = dist[min] + graph[min][i];
-				 }
-			 }
+			sptSet[min] = true;
+			
+			for (int i = 0; i < 15; i++)
+			{
+				if (!sptSet[i] && graph[min][i] != 0 && dist[min] != Integer.MAX_VALUE && dist[min] + graph[min][i] < dist[i])
+				{
+					dist[i] = dist[min] + graph[min][i];
+				}
+			}
 		}
+		//Return the value of the minimum distance for k
 		return dist[k];
 	}
 	
