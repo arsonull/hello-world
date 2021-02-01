@@ -1,0 +1,12 @@
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\bin\Debug\netstandard2.0\BusinessLayer.deps.json
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\bin\Debug\netstandard2.0\BusinessLayer.dll
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\bin\Debug\netstandard2.0\BusinessLayer.pdb
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.csprojAssemblyReference.cache
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.AssemblyInfoInputs.cache
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.AssemblyInfo.cs
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.csproj.CopyComplete
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.dll
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\BusinessLayer\obj\Debug\netstandard2.0\BusinessLayer.pdb

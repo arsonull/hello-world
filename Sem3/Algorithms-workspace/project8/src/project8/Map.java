@@ -103,7 +103,7 @@ public class Map
 		return 0;
 	}
 	
-	public int dijkstraPath(int s, int k)
+	public int dijkstraPath(int s, int k) //O(n)
 	{
 		//Create a local int array that ties along with a boolean array to correlate whether that node has been visited or not
 		int dist[] = new int[15];
@@ -112,7 +112,7 @@ public class Map
 		Boolean[] sptSet = new Boolean[15];
 		for (int i = 0; i < 15; i++)
 		{
-			//Set each value for the int array is set to max, so every number is less than that value. The boolean array is then set all to false
+			//Set each value for the int array to max, so every number is less than that value. Then each boolean in the boolean array is set to false
 			dist[i] = Integer.MAX_VALUE;
 			sptSet[i] = false;
 		}
