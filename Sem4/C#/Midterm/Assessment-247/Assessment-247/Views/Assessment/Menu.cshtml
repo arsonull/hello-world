@@ -1,0 +1,47 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Assessment Form";
+}
+@model FormModel
+@using (Html.BeginForm("Form", "Assessment", FormMethod.Post))
+{
+
+    <div class="row">
+        <div class=" = " col-md-4">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Calories" class="control-label"></label>
+                <input asp-for="Calories" class="form-control" />
+                <span asp-validation-for="Calories" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ing1" class="control-label"></label>
+                <input asp-for="Ing1" class="form-control" />
+                <span asp-validation-for="Ing1" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ing2" class="control-label"></label>
+                <input asp-for="Ing2" class="form-control" />
+                <span asp-validation-for="Ing2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+
+        </div>
+    </div>
+}
+@if (Model != null)
+{
+<h5>Name: @Model.Name</h5>
+<h5>Calories: @Model.Calories</h5>
+<h5>Ingredient 1: @Model.Ing1</h5>
+<h5>Ingredient 2: @Model.Ing2</h5>
+}
