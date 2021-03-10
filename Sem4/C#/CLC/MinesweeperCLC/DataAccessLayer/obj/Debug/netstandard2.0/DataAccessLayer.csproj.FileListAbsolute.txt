@@ -1,9 +1,0 @@
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.deps.json
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.dll
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\bin\Debug\netstandard2.0\DataAccessLayer.pdb
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csprojAssemblyReference.cache
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfoInputs.cache
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.AssemblyInfo.cs
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.csproj.CoreCompileInputs.cache
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.dll
-C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\CLC\MinesweeperCLC\DataAccessLayer\obj\Debug\netstandard2.0\DataAccessLayer.pdb

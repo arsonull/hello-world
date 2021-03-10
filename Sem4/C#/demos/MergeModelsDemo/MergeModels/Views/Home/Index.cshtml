@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@using MergeModels;
+@model ViewModel
+
+<h2>@ViewBag.Message</h2>
+
+<p>Teacher List</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+    </tr>
+    @foreach (TeacherModel teacher in Model.Teachers)
+    {
+        <tr>
+            <td>@teacher.teacherID</td>
+            <td>@teacher.code</td>
+            <td>@teacher.name</td>
+        </tr>
+    }
+</table>
+
+<p>Student List</p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Enrollment Number</th>
+    </tr>
+    @foreach (StudentModel student in Model.Students)
+    {
+        <tr>
+            <td>@student.studentID</td>
+            <td>@student.code</td>
+            <td>@student.name</td>
+            <td>@student.enrollmentNum</td>
+        </tr>
+    }
+</table>
