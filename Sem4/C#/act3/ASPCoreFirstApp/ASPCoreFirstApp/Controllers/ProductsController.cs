@@ -34,5 +34,32 @@ namespace ASPCoreFirstApp.Controllers
             ViewBag.num = 13;
             return View();
         }
+
+        public IActionResult SearchResults(string key)
+        {
+            List<ProductModel> prodList = DAO.SearchProducts(key);
+            return View("Index", prodList);
+        }
+
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
+
+        public IActionResult ShowOneProduct(int id)
+        {
+            return View(DAO.GetProductByID(id));
+        }
+
+        public IActionResult ShowEditForm(int id)
+        {
+            return View(DAO.GetProductByID(id));
+        }
+
+        public IActionResult ProcessEdit(ProductModel prod)
+        {
+            DAO.Update(prod);
+            return View("Index", DAO.AllProducts());
+        }
     }
 }
