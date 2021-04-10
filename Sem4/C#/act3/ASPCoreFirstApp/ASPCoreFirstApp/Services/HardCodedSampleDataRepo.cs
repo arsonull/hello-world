@@ -37,7 +37,7 @@ namespace ASPCoreFirstApp.Services
             throw new NotImplementedException();
         }
 
-        public bool Delete(ProductModel product)
+        public bool Delete(int id)
         {
             throw new NotImplementedException();
         }

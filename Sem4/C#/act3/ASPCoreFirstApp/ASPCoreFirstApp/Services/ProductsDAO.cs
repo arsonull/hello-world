@@ -64,9 +64,28 @@ namespace ASPCoreFirstApp.Services
             return prodList;
         }
 
-        public bool Delete(ProductModel product)
+        public bool Delete(int id)
         {
-            throw new NotImplementedException();
+            string stmt = "DELETE FROM dbo.products WHERE ID = @ID";
+
+            using (SqlConnection conn = new SqlConnection(connString))
+            {
+                SqlCommand command = new SqlCommand(stmt, conn);
+
+                command.Parameters.AddWithValue("@ID", id);
+                try
+                {
+                    if (command.ExecuteNonQuery() > 0)
+                        return true;
+                    else
+                        return false;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }
+            return false;
         }
 
         public int Insert(ProductModel product)

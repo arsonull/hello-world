@@ -61,5 +61,11 @@ namespace ASPCoreFirstApp.Controllers
             DAO.Update(prod);
             return View("Index", DAO.AllProducts());
         }
+
+        public IActionResult DeleteProduct(int id)
+        {
+            DAO.Delete(id);
+            return Index();
+        }
     }
 }

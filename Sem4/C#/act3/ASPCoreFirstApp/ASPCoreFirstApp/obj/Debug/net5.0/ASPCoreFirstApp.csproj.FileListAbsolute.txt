@@ -288,3 +288,4 @@ C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\act3\ASPCoreFirstApp\
 C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\act3\ASPCoreFirstApp\ASPCoreFirstApp\obj\Debug\net5.0\Razor\Views\Shared\_navbar.cshtml.g.cs
 C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\act3\ASPCoreFirstApp\ASPCoreFirstApp\obj\Debug\net5.0\Razor\Views\Products\OlderIndex.cshtml.g.cs
 C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\act3\ASPCoreFirstApp\ASPCoreFirstApp\obj\Debug\net5.0\Razor\Views\Products\ShowOneProduct.cshtml.g.cs
+C:\Users\spart\Documents\GitHub\arsonull.github.io\Sem4\C#\act3\ASPCoreFirstApp\ASPCoreFirstApp\obj\Debug\net5.0\Razor\Views\Products\ShowEditForm.cshtml.g.cs

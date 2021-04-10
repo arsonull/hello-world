@@ -14,7 +14,7 @@ namespace ASPCoreFirstApp.Services
             List<ProductModel> SearchProducts(string key);
             ProductModel GetProductByID(int id);
             int Insert(ProductModel product);
-            bool Delete(ProductModel product);
+            bool Delete(int id);
             int Update(ProductModel product);
         }
     }

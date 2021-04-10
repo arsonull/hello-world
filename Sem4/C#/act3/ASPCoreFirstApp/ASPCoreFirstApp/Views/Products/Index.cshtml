@@ -17,8 +17,9 @@
 
                 <p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
                 <a href="/products/ShowOneProduct/@item.Id" class="btn btn-primary">View Product</a>
-                <a href="/products/ShowEditForm/@item.Id" class="btn btn-warning">Edit</a>
+                <a href="/products/ShowEditForm/@item.Id" class="btn btn-secondary">Edit</a>
+                <a href="/products/DeleteProduct/@item.Id" class="btn btn-danger">Delete</a>
             </div>
         </div>
     }
-</div> 
+</div>
