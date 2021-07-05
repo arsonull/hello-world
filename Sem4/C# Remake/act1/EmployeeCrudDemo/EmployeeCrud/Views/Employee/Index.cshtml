@@ -1,0 +1,83 @@
+﻿@*By including a @model statement at the top of the view templage file
+    you can specify the type of object the view expects.
+    This @model directive allows us to access the list of Employees
+    the controller passed to the view by using the Model object
+    that's strongly typed.*@
+@model IEnumerable<DataAccessLayer.EmployeeInfo>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+@*The HTML <p> element represents a paragraph*@
+<p>
+    @*The <a> tage defines a hyperlink, which is used
+        to link from one page to another.*@
+    <a asp-action="Create">Create New</a>
+</p>
+
+@*For Displaying Employee Info*@
+@*An HTML table consists of one <table> element
+    and one or more <tr>, <th>, and <td> elements.*@
+<table class="table table-striped">
+    @*The <thead> tag is used to group header content in the HTML table.*@
+    <thead>
+        @*The <tr> tag defines a row in a HTML table.*@
+        <tr>
+            @*The <th> tag defines a header cell in an HTML table.
+        The test in <th> element are bold and centered by default.*@
+            <th>
+                @*The DisplayNameFor shows the name of property or the
+            string defined in the in the display attribute for the property.*@
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>
+        </tr>
+    </thead>
+    @*The <tbody> element is use in conjunction with the <thead> and <tfoot>
+        elements to specity each part of a table (body, header, footer).*@
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                @*The <td> tag defines a standard data cell in an HTML table.
+            The text in <td> elements are regular and left-aligned by default.*@
+                <td>
+                    @*The DisplayFor() helper method is a strongly typed extension method.
+                It generates an html string for the model object property
+                specified using a lambda expression.*@
+                    @Html.DisplayFor(modelItem => emp.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => emp.Gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => emp.Company)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => emp.Department)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@emp.EmployeeID">Edit</a>
+                    <a asp-action="Details" asp-route-id="@emp.EmployeeID">Details</a>
+                    <a asp-action="Delete" asp-route-id="@emp.EmployeeID">Delete</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+
+</table>
+

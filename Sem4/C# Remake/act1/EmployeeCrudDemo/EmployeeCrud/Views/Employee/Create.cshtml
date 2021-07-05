@@ -1,0 +1,78 @@
+﻿
+@model DataAccessLayer.EmployeeInfo
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Create</h1>
+<h3>Employee Entry</h3>
+<hr />
+
+@*Html.BeginForm is the Html Helper Extension Method that is used for creating and rendering
+    the form in HTML. This method makes your job easier in creating form.
+    Syntax: Html.BeginForm("ActionMethod", "ControllerName","Get⁄Post Method")
+    ActionMethod – It defines which action method is look for when submit button is clicked.
+    ControllerName – It defines, which controller keeps the defined action method.
+    Get/Post Method – it defines the method you want to use to send data from form to controller. *@
+@using (Html.BeginForm("Create", "Employee", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="row">
+        <div class=" = " col-md-4">
+            @*(Tag Helpers) -- ValidationSummary.All will display both property and model level
+                validations messages while ValidationSummary.ModelOnly will
+                display only validation messages that apply to the model level.*@
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                @*The input Tag Helper binds an HTML <input> element to a mdel expression in the
+                    razor view.  Is equivalent to model=>model.Name -- the name of the expression is used
+                    for the asp-for attribute.*@
+                <input asp-for="Name" class="form-control" />
+                @*The validation message tag helper is used to display a validation
+                    message for a specific property of your model class.  In this
+                    case "The Name field is required" will be shown if the field
+                    is submitted blank.*@
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <select asp-for="Gender" class="form-control">
+                    <option value="">-- Select Gender --</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input asp-for="Gender" class="form-control" />
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Company" class="control-label"></label>
+                <input asp-for="Company" class="form-control" />
+                <span asp-validation-for="Company" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-success" />
+            </div>
+
+        </div>
+    </div>
+}
+@*Come down after the current final div*@
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@*Used for "client side validation" (javascript).
+    It does not let the user send the form if it is not valid
+    (according to Model Validation).*@
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
