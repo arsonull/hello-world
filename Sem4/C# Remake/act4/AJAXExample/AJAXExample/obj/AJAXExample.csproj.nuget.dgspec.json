@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj": {}
+    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj": {
+    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
+        "projectUniqueName": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
         "projectName": "AJAXExample",
-        "projectPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
+        "projectPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
         "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\obj\\",
+        "outputPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",

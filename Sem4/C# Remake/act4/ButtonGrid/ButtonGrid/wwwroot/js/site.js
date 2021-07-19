@@ -20,7 +20,9 @@ function doButtonUpdate(buttNum) {
         },
         success: function (data) {
             console.log(data);
-            $("#" + buttNum).html(data);
+            // Data now comes in two parts
+            $("#" + buttNum).html(data.part1);
+            $("#messageArea").html(data.part2);
         }
     });
 };

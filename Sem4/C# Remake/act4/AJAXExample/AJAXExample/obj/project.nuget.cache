@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O+EeDcPZbyh1S4qyEeudqKNGUBh+Rj8Cs1yCibdTxnc+go+/pYmMHl4q32/kLK8q9Wz+4M8++DAxEL2LBEiSQg==",
+  "dgSpecHash": "FK5mV29MrlbAfWrML+OcjhU/SRySQUTdLRuOYw3wu1m6cpzZyoX1ampgsR/goHlWPlAgKoFUxSXlQkTGaMz1OA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\AJAXExample\\AJAXExample\\AJAXExample.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

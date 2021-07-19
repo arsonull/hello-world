@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj": {}
+    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj": {}
   },
   "projects": {
-    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj": {
+    "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
+        "projectUniqueName": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
         "projectName": "ButtonGrid",
-        "projectPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
+        "projectPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
         "packagesPath": "C:\\Users\\spart\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\obj\\",
+        "outputPath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\spart\\AppData\\Roaming\\NuGet\\NuGet.Config",

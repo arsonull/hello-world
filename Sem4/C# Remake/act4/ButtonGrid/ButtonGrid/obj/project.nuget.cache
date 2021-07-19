@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9lykNzH+4ZCaP6DFblWbr7cGdbt3/lsts/MhAYbGjcj9jdsuUNRsrhTnVXUa01Cg9zP65slxxAb0eoRUG5poSg==",
+  "dgSpecHash": "ZmIFQIW1IjP6gNRaecJs87rAx4F1d+xx8aFvLy+DN6iG7VfOKnmv8HCBtdI5BFKzh0LJX3xSp9GCGhKmQMyMAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C#\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
+  "projectFilePath": "C:\\Users\\spart\\Documents\\GitHub\\arsonull.github.io\\Sem4\\C# Remake\\act4\\ButtonGrid\\ButtonGrid\\ButtonGrid.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\spart\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\spart\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
