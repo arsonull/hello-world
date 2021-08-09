@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CST247-Benchmark", "CST247-Benchmark\CST247-Benchmark.csproj", "{7D809580-2A02-4A64-B7EB-026BE7812491}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D809580-2A02-4A64-B7EB-026BE7812491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D809580-2A02-4A64-B7EB-026BE7812491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D809580-2A02-4A64-B7EB-026BE7812491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D809580-2A02-4A64-B7EB-026BE7812491}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3658C248-07A5-4445-8A29-120958D071C2}
+	EndGlobalSection
+EndGlobal

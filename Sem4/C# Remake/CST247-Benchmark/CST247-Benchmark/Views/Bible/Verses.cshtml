@@ -1,0 +1,61 @@
+﻿@model IEnumerable<CST247_Benchmark.Models.BibleVerseModel>
+
+@{
+    ViewData["Title"] = "Verses";
+}
+
+<h1>Verses</h1>
+
+<h2>Viewing @Model.Count() results</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.testament)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.book)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.chapter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.verse)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.text)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.testament)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.book)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.chapter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.verse)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.text)
+            </td>
+            @*<td>
+                <form asp-action="viewVerse">
+                    <input id="book" type="hidden" value="@item.bookNumber"/>
+                    <input id="chap" type="hidden" value="@item.chapter" />
+                    <input id="verse" type="hidden" value="@item.verse" />
+                    <input type="submit" value="View" class="btn btn-primary" />
+                </form>
+            </td>*@
+        </tr>
+}
+    </tbody>
+</table>
